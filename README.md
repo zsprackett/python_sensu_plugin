@@ -48,6 +48,45 @@ this:
     if __name__ == "__main__":
       f = MyCheck()
 
+## Metrics
+
+### JSON
+
+    from sensu_plugin import SensuPluginMetricJSON
+
+    class FooBarBazMetricJSON(SensuPluginMetricJSON):
+        def run(self):
+            self.ok({'foo': 1, 'bar': { 'baz': 'stuff' } })
+
+    if __name__ == "__main__":
+    f = FooBarBazMetricJSON()
+
+### Graphite
+
+    from sensu_plugin import SensuPluginMetricGraphite
+
+    class FooBarBazMetricGraphite(SensuPluginMetricGraphite):
+        def run(self):
+            self.output('a', 1)
+            self.output('b', 2)
+            self.ok()
+
+    if __name__ == "__main__":
+    f = FooBarBazMetricGraphite()
+
+### StatsD
+
+    from sensu_plugin import SensuPluginMetricStatsd
+
+    class FooBarBazMetricStatsd(SensuPluginMetricStatsd):
+        def run(self):
+            self.output('a', 1, 'ms')
+            self.output('b.c.d', 15)
+            self.ok()
+
+    if __name__ == "__main__":
+    f = FooBarBazMetricStatsd()
+
 ## License
 
 * Based heavily on [sensu-plugin](https://github.com/sensu/sensu-plugin) Copyright 2011 Decklin Foster
