@@ -55,3 +55,5 @@ this:
 
 Released under the same terms as Sensu (the MIT license); see LICENSE
 for details
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/zsprackett/python_sensu_plugin/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
