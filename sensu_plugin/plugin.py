@@ -29,7 +29,7 @@ class SensuPlugin(object):
     self.run()
 
   def output(self, args):
-    print "Sensu::Plugin::CLI: %s" % ' '.join(str(a) for a in args)
+    print "SensuPlugin: %s" % ' '.join(str(a) for a in args)
 
   def __make_dynamic(self, method):
     ec = ExitCode()
