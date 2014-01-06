@@ -20,14 +20,14 @@ class SensuPluginCheck(SensuPlugin):
     return self.__class__.__name__
 
   def message(self, *m):
-    self.message = m
+    self._message = m
 
   def output(self, m):
     msg = ''
-    if m[0] == None and len(m) == 1:
-      m = self.message
+    if m == None or (m[0] == None and len(m) == 1):
+      m = self._message
 
-    if not (m[0] == None and len(m) == 1):
+    if not m == None and not (m[0] == None and len(m) == 1):
       msg = ": {}".format(' '.join(str(message) for message in m))
 
     print "{} {}{}".format(self.check_name(), self.status, msg)

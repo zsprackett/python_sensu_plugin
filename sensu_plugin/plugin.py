@@ -13,6 +13,7 @@ from exithook import ExitHook
 
 class SensuPlugin(object):
   def __init__(self):
+    self._message = None
     self.hook = ExitHook()
     self.hook.hook()
     for method in dir(ExitCode):
@@ -35,6 +36,8 @@ class SensuPlugin(object):
     ec = ExitCode()
     def dynamic(*args):
       self.status = method
+      if (len(args) == 0):
+        args = None
       self.output(args)
       sys.exit(getattr(ec, method))
 
