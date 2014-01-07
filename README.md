@@ -1,3 +1,5 @@
+![sensu](https://raw.github.com/sensu/sensu/master/sensu-logo.png)
+
 # Python Sensu Plugin
 
 This is a framework for writing your own Sensu plugins in Python.
