@@ -1,4 +1,5 @@
-from plugin import SensuPlugin
-from check import SensuPluginCheck
-from metric import SensuPluginMetricJSON, SensuPluginMetricGraphite, SensuPluginMetricStatsd
-import exitcode
+from sensu_plugin.plugin import SensuPlugin
+from sensu_plugin.check import SensuPluginCheck
+from sensu_plugin.metric import SensuPluginMetricJSON, SensuPluginMetricGraphite, SensuPluginMetricStatsd
+from sensu_plugin.handler import SensuHandler
+import sensu_plugin.exitcode

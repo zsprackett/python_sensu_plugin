@@ -9,8 +9,10 @@
 
 import sys
 
+
 class ExitHook(object):
     def __init__(self):
+        self._orig_exit = None
         self.exit_code = None
         self.exception = None
 

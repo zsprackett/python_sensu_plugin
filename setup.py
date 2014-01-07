@@ -12,6 +12,11 @@ setup(
     description='A framework for writing Python sensu plugins.',
     long_description="""
     """,
-    #install_requires=[
-    #],
+    install_requires=[
+        'argparse'
+    ],
+    tests_require=[
+        'pep8',
+        'pylint'
+    ],
 )

@@ -8,8 +8,6 @@
 # for details.
 
 
-class ExitCode(object):
-    OK = 0
-    WARNING = 1
-    CRITICAL = 2
-    UNKNOWN = 3
+class SensuHandler(object):
+    def __init__(self):
+        pass

@@ -2,9 +2,11 @@
 
 # Python Sensu Plugin
 
-This is a framework for writing your own Sensu plugins in Python.
+This is a framework for writing your own [Sensu](https://github.com/sensu/sensu) plugins in Python.
 It's not required to write a plugin (most Nagios plugins will work
 without modification); it just makes it easier.
+
+[![Build Status](https://travis-ci.org/zsprackett/python_sensu_check.png?branch=master)](https://travis-ci.org/zsprackett/python_sensu_check)
 
 ## Checks
 
