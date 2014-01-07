@@ -7,6 +7,7 @@
 # Released under the same terms as Sensu (the MIT license); see LICENSE
 # for details.
 
+from __future__ import print_function
 from sensu_plugin.plugin import SensuPlugin
 
 
@@ -31,4 +32,4 @@ class SensuPluginCheck(SensuPlugin):
         if not m is None and not (m[0] is None and len(m) == 1):
             msg = ": {}".format(' '.join(str(message) for message in m))
 
-        print "{} {}{}".format(self.check_name(), self.status, msg)
+        print("{} {}{}".format(self.check_name(), self.status, msg))

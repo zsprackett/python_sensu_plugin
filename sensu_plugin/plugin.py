@@ -7,6 +7,7 @@
 # Released under the same terms as Sensu (the MIT license); see LICENSE
 # for details.
 
+from __future__ import print_function
 import atexit
 import sys
 import argparse
@@ -35,7 +36,7 @@ class SensuPlugin(object):
         self.run()
 
     def output(self, args):
-        print "SensuPlugin: %s" % ' '.join(str(a) for a in args)
+        print("SensuPlugin: %s" % ' '.join(str(a) for a in args))
 
     def __make_dynamic(self, method):
         ec = ExitCode()
@@ -57,6 +58,6 @@ class SensuPlugin(object):
 
     def __exitfunction(self):
         if self.hook.exit_code is None and self.hook.exception is None:
-            print "Check did not exit! You should call an exit code method."
+            print("Check did not exit! You should call an exit code method.")
         elif self.hook.exception:
-            print "Check failed to run: %s" % self.hook.exception
+            print("Check failed to run: %s" % self.hook.exception)
